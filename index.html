@@ -1,10 +1,35 @@
 <!DOCTYPE html>
 <html lang="">
   <head>
-    <meta charset="UTF-8">
-    <link rel="icon" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
+    <script>
+      window.DH_DEBUG = true;
+      (function (d, a, t, h, u, i, s) {
+        d["DatHuisObject"] = u;
+        d[u] =
+          d[u] ||
+          function () {
+            (d[u].q = d[u].q || []).push(arguments);
+          };
+        d[u].l = 1 * new Date();
+        se = a.createElement(t);
+        fs = a.getElementsByTagName(t)[0];
+        se["async"] = 1;
+        se.src = h;
+        fs.parentNode.insertBefore(se, fs);
+      })(
+        window,
+        document,
+        "script",
+        // 'https://btstrp.dathuis.nl/assets/iframeBridge.min.js',
+        "http://localhost:8080/assets/iframeBridge.min.js",
+        "iFrameBridge"
+      );
+      iFrameBridge("init");
+    </script>
   </head>
   <body>
     <div id="app"></div>
