@@ -1,13 +1,10 @@
 <script setup>
 import FormSample from "./components/FormSample.vue";
-import HelloWorld from "./components/HelloWorld.vue";
 </script>
 
 <template>
   <header>
-    <div class="wrapper">
-      <HelloWorld msg="Good day to you sir!" />
-    </div>
+    <div class="wrapper">Hello there!</div>
   </header>
 
   <main>
