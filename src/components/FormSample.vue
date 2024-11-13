@@ -4,7 +4,13 @@
     <form @submit.prevent="handleSubmit">
       <div class="form-group">
         <label for="name">Name:*</label>
-        <input v-model="formData.name" type="text" id="name" required />
+        <input
+          v-model="formData.name"
+          type="text"
+          id="name"
+          data-ingest-key="contact.name"
+          required
+        />
       </div>
       <div class="form-group">
         <label for="email">Email:</label>
