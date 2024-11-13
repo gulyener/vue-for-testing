@@ -1,18 +1,14 @@
 <template>
   <div class="form-container">
-    <h2>Contact Us</h2>
+    <h2>More information</h2>
     <form @submit.prevent="handleSubmit">
       <div class="form-group">
-        <label for="name">Name:*</label>
-        <input v-model="formData.name" type="text" id="name" required />
+        <label for="postCode">Postcode:</label>
+        <input v-model="formData.postCode" type="text" id="postCode" />
       </div>
       <div class="form-group">
-        <label for="email">Email:</label>
-        <input v-model="formData.email" type="email" id="email" />
-      </div>
-      <div class="form-group">
-        <label for="message">Message:</label>
-        <textarea v-model="formData.message" id="message"></textarea>
+        <label for="dateOfBirth">Date of birth:</label>
+        <input v-model="formData.dateOfBirth" type="date" id="dateOfBirth" />
       </div>
       <button type="submit">Submit</button>
       <button type="button" @click="resetForm">Clear</button>
@@ -20,10 +16,8 @@
     <div v-if="submitted">
       <p>Thank you, {{ formData.name }}! Your message has been sent.</p>
       <div class="submitted-data">
-        <p>Thank you, {{ formData.name }}! Your message has been sent.</p>
-        <p><strong>Name:</strong> {{ formData.name }}</p>
-        <p><strong>Email:</strong> {{ formData.email }}</p>
-        <p><strong>Message:</strong> {{ formData.message }}</p>
+        <p><strong>Postcode:</strong> {{ formData.postCode }}</p>
+        <p><strong>Date of birth:</strong> {{ formData.dateOfBirth }}</p>
       </div>
     </div>
   </div>
@@ -31,13 +25,12 @@
 
 <script>
 export default {
-  name: "UserForm",
+  name: "SecondForm",
   data() {
     return {
       formData: {
-        name: "",
-        email: "",
-        message: "",
+        postCode: "",
+        dateOfBirth: "",
       },
       submitted: false,
     };
@@ -50,9 +43,8 @@ export default {
     },
     resetForm() {
       this.formData = {
-        name: "",
-        email: "",
-        message: "",
+        postCode: "",
+        dateOfBirth: "",
       };
       this.submitted = false;
     },

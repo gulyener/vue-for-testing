@@ -1,5 +1,5 @@
 <script setup>
-import FormSample from "./components/FormSample.vue";
+import { RouterLink, RouterView } from "vue-router";
 </script>
 
 <template>
@@ -7,8 +7,13 @@ import FormSample from "./components/FormSample.vue";
     <div class="wrapper">Hello there!</div>
   </header>
 
+  <nav>
+    <RouterLink to="/">First page</RouterLink>
+    <RouterLink to="/second-page">Second page</RouterLink>
+  </nav>
+
   <main>
-    <FormSample />
+    <RouterView />
   </main>
 </template>
 
