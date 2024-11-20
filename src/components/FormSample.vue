@@ -20,16 +20,31 @@
         <label for="message">Message:</label>
         <textarea v-model="formData.message" id="message"></textarea>
       </div>
+      <div id="ingest-checking-key-only-select">
+        <label for="age-select">Using ingest key on select elements</label>
+        <select
+          v-model="formData.ageSelect"
+          name="age"
+          id="age-select"
+          data-ingest-key="age"
+        >
+          <option value="">--Please choose an option--</option>
+          <option value="1">1</option>
+          <option value="13">13</option>
+          <option value="22">22</option>
+          <option value="32">32</option>
+        </select>
+      </div>
       <button type="submit">Submit</button>
       <button type="button" @click="resetForm">Clear</button>
     </form>
     <div v-if="submitted">
       <p>Thank you, {{ formData.name }}! Your message has been sent.</p>
       <div class="submitted-data">
-        <p>Thank you, {{ formData.name }}! Your message has been sent.</p>
         <p><strong>Name:</strong> {{ formData.name }}</p>
         <p><strong>Email:</strong> {{ formData.email }}</p>
         <p><strong>Message:</strong> {{ formData.message }}</p>
+        <p><strong>Selected age:</strong> {{ formData.ageSelect }}</p>
       </div>
     </div>
   </div>
@@ -44,6 +59,7 @@ export default {
         name: "",
         email: "",
         message: "",
+        ageSelect: "",
       },
       submitted: false,
     };
@@ -59,6 +75,7 @@ export default {
         name: "",
         email: "",
         message: "",
+        ageSelect: "",
       };
       this.submitted = false;
     },
