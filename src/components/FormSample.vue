@@ -8,7 +8,7 @@
           v-model="formData.name"
           type="text"
           id="name"
-          data-ingest-key="contact.name"
+          data-ingest-key="bndl.contact.name"
           required
         />
       </div>
@@ -26,7 +26,7 @@
           v-model="formData.ageSelect"
           name="age"
           id="age-select"
-          data-ingest-key="age"
+          data-ingest-key="user.age"
         >
           <option value="">--Please choose an option--</option>
           <option value="1">1</option>
